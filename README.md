@@ -8,7 +8,11 @@
   Sistema CRUD(Creat, Read, Update e delete) para administrador de site controlar o ecossistema de usuarios da plataforma, assim podendo criar, listar, atualizar e deletar qualquer um do banco de dados do sistema.
 
 ## Feramentas :hammer:
-
+* HTML5
+* CSS3
+* Javascript
+* PHP
+* Mysql
 
 ## Integração :gear:
 
