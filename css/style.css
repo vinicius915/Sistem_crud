@@ -1,0 +1,31 @@
+
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+
+.field-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+}
+
+.field-form{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-weight: 400;
+}
+
+#chackbox{
+    
+    margin-left: 3px;
+}
+
+.chackbox{
+    width: 300%;
+    margin-top: 2%;
+    margin-bottom: 25%;
+}
