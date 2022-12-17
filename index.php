@@ -1,17 +1,20 @@
 <?php 
 
-    $pdo = new PDO(
-        'mysql:host = localhost db = bdd_log', 'root', 'root'
-    );
+    $conn = new PDO('mysql:host=localhost; database=cadastro', 'root', 'rt123');
 
     //inserindo usuario e senha 
     if(isset($_POST['nome'])){
-        $sql = $pdo -> prepare("INSERT INTO usuarios VALUES (null, ? , ?) ");
+        $sql=$conn->prepare('INSERT INTO usuarios VALUES (null,?,?)');
         $sql->execute(array($_POST['nome'], $_POST['senha']));
         echo 'usuario inserido';
     }
 
-    
+    //deleter usuario
+    if(isset($_GET['Delete']))
+    {
+        $id = (int)$_GET['Delete'];
+        $conn->exec('DELETE FROM usuarios WHERE id=$id');
+    }
 
 ?>
 
@@ -41,10 +44,10 @@
 
 <div class="field-center">
     <div class="conteiner">
-        <form method="POST">
+        <form method="post">
             <fieldset class="field-form">
                 
-            <legend >ADM</legend>
+            <legend> ADM </legend>
 
             <label style="margin-left: 5px;"> Usuario: </label>
             <input id="chackbox" type="text" placeholder="..." name="nome" >
@@ -58,19 +61,20 @@
         </div>
 </div>
 
-    <!--======================== Listagem de users ============================-->
         <?php
+    
 
-        $sql = $pdo->prepare("SELECT * FROM usuarios");
-        $sql->execute();
+        //listagem usuarios
+       $sql = $conn->prepare("SELECT * FROM usuarios");
+       $sql->execute();
         
-        $fetchUsuarios = $sql->fetchAll();
+       $fetchUsuarios = $sql->fetchAll();
 
-        foreach ($fetchUsuarios as $key => $value)
-        {
-        echo '<a href= "?delete= '. $value['Codig_usuario'] .'">' .$value['Nome_usuarios']. '|' .$value['Senha_usuario']. '</a>';
+       foreach ($fetchUsuarios as $key => $value)
+       {
+        echo '<a href= "?delete= '. $value['id'] .'">' .$value['Nome_user']. '|' .$value['Senha_user']. '</a>';
         echo '<hr>';
-        }
+       }
 
         ?>
 </body>
