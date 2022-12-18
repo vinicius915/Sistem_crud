@@ -16,5 +16,11 @@
 
 ## Integração :gear:
 
+  Para funcionamento do sistema se necessitade um servidor local e uma integração com banco de dados, neste caso banco de dados sequencial.
+  
+  Neste caso a integração foi feita com o xampp (principal pacotes de servidores windows) e com BDD sendo integrado ao código através de MYSQL(Mariadb):
+  
+  
+
 ## licensa
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
