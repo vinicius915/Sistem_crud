@@ -20,6 +20,11 @@
   
   Neste caso a integração foi feita com o xampp (principal pacotes de servidores windows) e com BDD sendo integrado ao código através de MYSQL(Mariadb):
   
+  ![xamppimg](https://user-images.githubusercontent.com/60804241/208312664-4da68998-3cac-45ec-899c-684cb8d18504.png)
+  
+  Apesar de ser possivel fazer direto no MYSQL, foi utilizadoo Shell com ligação ao MariaDB:
+  
+  ![mariadb](https://user-images.githubusercontent.com/60804241/208312968-6071666a-2a3e-4764-8f93-6b123bb87a78.png)
   
 
 ## licensa
